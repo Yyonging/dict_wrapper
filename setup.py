@@ -11,7 +11,7 @@ setuptools.setup(
     description="A userful package to use '.' to visit value of dict",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/Yyonging/dict_wrapper",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
