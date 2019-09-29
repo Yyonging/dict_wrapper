@@ -15,7 +15,7 @@ Install and update using `pip`:
 A Simple Example
 -----
 
-    from dict_wrapper import DictWrapper
+.. code-block:: python
 
     data = {
         "who": 'your name',
@@ -25,6 +25,7 @@ A Simple Example
         }
     }
     config = DictWrapper(data)
+
     assert config.who == 'your name'
     assert config.province.city == ['shenzhen', 'guangzhou']
     print(config.area)
