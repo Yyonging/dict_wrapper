@@ -17,6 +17,8 @@ A Simple Example
 
 .. code-block:: python
 
+    from dict_wrapper import DictWrapper
+
     data = {
         "who": 'your name',
         "area": ['specify', 'china'],
@@ -25,7 +27,6 @@ A Simple Example
         }
     }
     config = DictWrapper(data)
-
     assert config.who == 'your name'
     assert config.province.city == ['shenzhen', 'guangzhou']
     print(config.area)
