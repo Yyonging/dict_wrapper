@@ -17,6 +17,7 @@ A Simple Example
 
 .. code-block:: python
 
+
     from dict_wrapper import DictWrapper
 
     data = {
