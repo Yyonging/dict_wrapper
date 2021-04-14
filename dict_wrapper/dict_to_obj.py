@@ -1,4 +1,3 @@
-
 class DictWrapper:
 
     class Dict(dict):
@@ -7,6 +6,11 @@ class DictWrapper:
 
     @staticmethod
     def wrapper(dictionary):
+        if isinstance(dictionary, list):
+            array_obj = []
+            for item in dictionary:
+                array_obj.append(DictWrapper.wrapper(item))
+            return array_obj
         if not isinstance(dictionary, dict):
             return dictionary
         obj = DictWrapper.Dict()
@@ -17,15 +21,22 @@ class DictWrapper:
     def __new__(cls, *args, **kwargs):
         return DictWrapper.wrapper(args[0])
 
+DW = DictWrapper
+
 if __name__ == '__main__':
     data = {
         "who": 'your name',
         "area": ['specify', 'china'],
         "province": {
             "city": ['shenzhen', 'guangzhou']
-        }
+        },
+        "citys":[{
+            "name":"shenzhen",
+            "othername":"鹏城"
+        }]
     }
-    config = DictWrapper(data)
+    config, config1 = DW(data), DictWrapper(data)
     assert config.who == 'your name'
     assert config.province.city == ['shenzhen', 'guangzhou']
     print(config.area)
+    print(config1.citys[0].name)
