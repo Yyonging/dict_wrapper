@@ -25,10 +25,14 @@ A Simple Example
         "area": ['specify', 'china'],
         "province": {
             "city": ['shenzhen', 'guangzhou']
-        }
+        },
+        "citys":[{
+            "name":"shenzhen",
+            "othername":"鹏城"
+        }]
     }
-    config = DictWrapper(data)
+    config, config1 = DW(data), DictWrapper(data)
     assert config.who == 'your name'
     assert config.province.city == ['shenzhen', 'guangzhou']
     print(config.area)
-
+    print(config1.citys[0].name)

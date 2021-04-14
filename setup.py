@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="dict_wrapper",
-    version="0.0.3",
+    version="0.0.4",
     packages=['dict_wrapper'],
     author="duanyongqiang",
     author_email="sysuduanyongqiang@163.com",
