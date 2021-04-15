@@ -1,6 +1,6 @@
 dict_wrapper
 -----
-user DictWrapper to visit the value like an object  
+use DictWrapper to visit the value like an object  
 
 Installing
 -----
